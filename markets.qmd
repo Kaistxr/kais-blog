@@ -1,0 +1,45 @@
+title: "Market Snapshot"S&P 500 Index<div id="sp500-container" style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; background-color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);"><h2>S&P 500 Index (SPX)</h2><p id="sp500-price" style="font-size: 2.5rem; margin: 0; font-weight: 700;">Loading...</p><p id="sp500-change" style="font-size: 1.2rem; font-weight: 500;">&nbsp;</p></div><script>// This script runs in the user's browser to fetch live dataasync function fetchSP500Snapshot() {// This is a placeholder that will be replaced by the GitHub Action during deployment.const apiKey = '%%POLYGON_API_KEY%%';const ticker = 'I:SPX';const priceElement = document.getElementById(&#39;sp500-price&#39;);
+const changeElement = document.getElementById(&#39;sp500-change&#39;);
+
+if (apiKey.startsWith(&#39;%%&#39;)) {
+    priceElement.innerText = &#39;Error&#39;;
+    changeElement.innerText = &#39;API Key not configured for deployment.&#39;;
+    changeElement.style.color = &#39;#dc3545&#39;;
+    return;
+}
+
+const url = `https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/tickers/${ticker}?apiKey=${apiKey}`;
+
+try {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`API request failed with status: ${response.status}`);
+    }
+    
+    const data = await response.json();
+
+    if (data.ticker &amp;&amp; data.ticker.day) {
+        const price = data.ticker.day.c; // Close price
+        const change = data.ticker.day.c - data.ticker.prevDay.c;
+        const percentChange = (change / data.ticker.prevDay.c) * 100;
+
+        priceElement.innerText = price.toFixed(2);
+        changeElement.innerText = `${change.toFixed(2)} (${percentChange.toFixed(2)}%)`;
+        
+        if (change &gt;= 0) {
+            changeElement.style.color = &#39;#28a745&#39;; // Green
+        } else {
+            changeElement.style.color = &#39;#dc3545&#39;; // Red
+        }
+    } else {
+        priceElement.innerText = &#39;Error&#39;;
+        changeElement.innerText = &#39;Data not found in API response.&#39;;
+        changeElement.style.color = &#39;#dc3545&#39;;
+    }
+
+} catch (error) {
+    priceElement.innerText = &#39;Error&#39;;
+    changeElement.innerText = `Failed to fetch data: ${error.message}`;
+    changeElement.style.color = &#39;#dc3545&#39;;
+}
+}// Run the function after the page content has loaded.document.addEventListener('DOMContentLoaded', fetchSP500Snapshot);</script>

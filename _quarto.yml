@@ -1,0 +1,45 @@
+# Main configuration file for your Quarto blog
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "My Markets Blog"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: markets.qmd
+        text: Markets
+      - href: tech.qmd
+        text: Tech
+      - href: opinion.qmd
+        text: Opinion
+      - href: internships.qmd
+        text: Internships
+    right:
+      - href: about.qmd
+        text: About
+      - icon: github
+        href: https://github.com/Kaistxr # Add your GitHub repo link here
+      - icon: linkedin
+        href: https://linkedin.com/in/your-username # Add your LinkedIn link here
+  page-footer:
+    left: "Blog made with Quarto"
+    right:
+      - icon: github
+        href: https://github.com/your-username/your-repo-name
+
+format:
+  html:
+    theme: zephyr
+    css: styles.css
+    mainfont: "Inter"
+    html-math-method: mathjax
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+editor: visual

@@ -1,0 +1,98 @@
+/* Professional CSS for Quarto Blog */
+
+/* --- General Body and Typography --- */
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: #333; /* Dark grey for text for better readability than pure black */
+    background-color: #fdfdfd; /* A very light off-white background */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Bolder headings */
+    color: #1a1a1a;
+}
+
+/* --- Links --- */
+
+a {
+    color: #0056b3; /* A professional blue */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+    border-bottom: 1px solid transparent; /* Make default underline transparent */
+}
+
+a:hover {
+    color: #003d82;
+    border-bottom-color: #003d82;
+}
+
+/* --- Navbar Styling --- */
+.navbar {
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.navbar-nav .nav-link {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent; /* Underline placeholder */
+    transition: border-bottom-color 0.2s ease-in-out;
+}
+
+/* Remove hover effect from general 'a' tags for navbar links */
+.navbar-nav .nav-link:hover {
+    border-bottom-color: #0056b3;
+}
+
+/* Style for the currently active page link */
+.navbar-nav .nav-link.active {
+    color: #1a1a1a;
+    border-bottom-color: #1a1a1a;
+}
+
+
+/* --- Main Content Area --- */
+.body-content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+/* --- Blockquotes for highlighting text --- */
+blockquote {
+    border-left: 4px solid #0056b3;
+    padding-left: 1.5rem;
+    margin-left: 0;
+    color: #555;
+    font-style: italic;
+    background-color: #f8f9fa;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 4px;
+}
+
+/* --- Code Blocks --- */
+pre, code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f8f9fa; /* Light grey background */
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+pre {
+    padding: 1rem;
+    white-space: pre-wrap; /* Wrap long lines of code */
+    word-wrap: break-word;
+}
+
+/* --- Embedded iFrames (for Streamlit) --- */
+iframe {
+    border: 1px solid #e0e0e0 !important; /* Override inline styles if necessary */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}

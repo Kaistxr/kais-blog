@@ -1,0 +1,43 @@
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+
+name: Quarto Publish
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Python Dependencies
+        run: pip install matplotlib
+
+      - name: Replace API Key Placeholder
+        # This command finds all HTML files in the output 'docs' directory
+        # and replaces the placeholder with the secret API key.
+        run: |
+          find docs -type f -name "*.html" -exec sed -i "s|%%POLYGON_API_KEY%%|${{ secrets.POLYGON_API_KEY }}|g" {} +
+        env:
+          POLYGON_API_KEY: ${{ secrets.POLYGON_API_KEY }}
+
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

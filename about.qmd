@@ -1,0 +1,16 @@
+---
+title: "About Me"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/kai-larsen-pugh
+    - icon: github
+      text: Github
+      href: https://github.com/Kaistxr
+
+---
+
+Hey, I'm Kai and these are my takes on daily market movements. This is my project to help build my coding skills alongside my understanding of financial markets. ***Hope you enjoy!***
