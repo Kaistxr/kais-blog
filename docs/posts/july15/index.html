@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kai">
-<meta name="dcterms.date" content="2025-07-10">
+<meta name="dcterms.date" content="2025-07-15">
 
-<title>Market Update: NVIDIA’s New Peak and Copper’s Tariff Shock + UBS Roadshow! – My Markets Blog</title>
+<title>Today’s Headlines: Banks, Bonds, and Bans – My Markets Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,41 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -164,12 +129,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Market Update: NVIDIA’s New Peak and Copper’s Tariff Shock + UBS Roadshow!</h1>
+      <h1 class="title">Today’s Headlines: Banks, Bonds, and Bans</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Equities</div>
                 <div class="quarto-category">Macro</div>
-                <div class="quarto-category">Tech</div>
-                <div class="quarto-category">Commodities</div>
               </div>
                   </div>
   </div>
@@ -187,7 +150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 10, 2025</p>
+        <p class="date">July 15, 2025</p>
       </div>
     </div>
     
@@ -222,140 +185,67 @@ border-bottom: 2px solid #dee2e6;
 padding-bottom: 0.5rem;
 margin-bottom: 1rem;
 }
+.bond-yields {
+display: inline;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
+text-align: center;
+font-size: 0.8rem;
+color: #6c757d;
+}
+.bond-yields img {
+width: 100%;
+border-radius: 8px;
+border: 1px solid #dee2e6;
+}
 </style>
 <div class="g-col-md-1">
 <!-- This is an empty column that creates space on the left -->
 </div>
-<section id="nvidia-the-first-four-trillion-dollar-company" class="level1">
-<h1>NVIDIA: The First Four-Trillion-Dollar Company</h1>
-<div id="cell-fig-nvidia" class="cell" data-execution_count="1">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Data for stock prices from macrotrends.net</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>stock_data <span class="op">=</span> [</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2024-09-16"</span>, <span class="fl">116.78</span>),</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2024-10-03"</span>, <span class="fl">122.85</span>),</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2024-10-22"</span>, <span class="fl">143.59</span>),</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2024-11-08"</span>, <span class="fl">147.63</span>),</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2024-11-27"</span>, <span class="fl">135.34</span>),</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2024-12-17"</span>, <span class="fl">130.39</span>),</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-01-08"</span>, <span class="fl">140.11</span>),</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-01-29"</span>, <span class="fl">123.70</span>),</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-02-18"</span>, <span class="fl">139.40</span>),</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-03-07"</span>, <span class="fl">112.69</span>),</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-03-26"</span>, <span class="fl">113.76</span>),</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-04-14"</span>, <span class="fl">110.71</span>),</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-05-05"</span>, <span class="fl">113.82</span>),</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-05-22"</span>, <span class="fl">131.80</span>),</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-06-11"</span>, <span class="fl">142.83</span>),</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-06-30"</span>, <span class="fl">157.99</span>),</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-07-09"</span>, <span class="fl">162.88</span>),</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-07-10"</span>, <span class="fl">164.10</span>),</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of shares outstanding for NVIDIA as of July 2025 is ~24.44 billion</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>shares_outstanding <span class="op">=</span> <span class="fl">24.44e9</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Separate dates and prices</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>dates_str, prices <span class="op">=</span> <span class="bu">zip</span>(<span class="op">*</span>stock_data)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert date strings to datetime objects</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>dates <span class="op">=</span> [datetime.datetime.strptime(d, <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">"</span>) <span class="cf">for</span> d <span class="kw">in</span> dates_str]</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate market cap in trillions</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>market_caps <span class="op">=</span> [(price <span class="op">*</span> shares_outstanding) <span class="op">/</span> <span class="fl">1e12</span> <span class="cf">for</span> price <span class="kw">in</span> prices]</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the plot</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="dv">5</span>))</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>plt.plot(dates, market_caps, marker<span class="op">=</span><span class="st">'o'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>, color<span class="op">=</span><span class="st">'g'</span>)</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a horizontal line at the $4 trillion mark</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>plt.axhline(y<span class="op">=</span><span class="dv">4</span>, color<span class="op">=</span><span class="st">'r'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'$4 Trillion Mark'</span>)</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Add titles and labels</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"NVIDIA (NVDA) Market Cap (Last 12 Months)"</span>)</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Date"</span>)</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Market Cap (USD Trillions)"</span>)</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Format the plot to ensure everything fits</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>plt.gcf().autofmt_xdate()</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the chart as a PNG image file for your website</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'nvidia_market_cap.png'</span>)</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the plot</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<div id="fig-nvidia" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-nvidia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-nvidia-output-1.png" width="661" height="469" class="figure-img">
+<section id="us-bank-earnings-kick-off-with-a-bang" class="level1">
+<h1>US Bank Earnings Kick Off with a Bang</h1>
+<p>It’s a huge week for market-moving data, and Wall Street has followed on from London bank’s strong Q2 earnings reports. Major US banks, including JPMorgan Chase and Citigroup, reported Q2 earnings that comfortably beat analyst expectations. The key driver, similar to last week’s theme, was their trading divisions. Volatility in rates and commodities has created a fertile environment for client activity, boosting trading revenues and offsetting continued weakness in M&amp;A and advisory fees. This strong start to earnings season has provided an early boost to market sentiment.</p>
+</section>
+<section id="is-the-bank-of-japan-about-to-pivot" class="level1">
+<h1>Is the Bank of Japan About to Pivot?</h1>
+<p>For decades, the Bank of Japan (BoJ) has been the anchor of global low interest rates, pursuing a very loose monetary policy defined by negative rates and Yield Curve Control (YCC). This has made the Japanese Yen the world’s primary funding currency for the “carry trade”; borrowing cheaply in Yen to invest in higher-yielding assets abroad. Now, for the first time in a generation, there are credible signs that this era may be ending.</p>
+<blockquote class="blockquote">
+<h4 id="what-is-yield-curve-control" class="anchored" data-anchor-id="is-the-bank-of-japan-about-to-pivot">What is Yield Curve Control?<br>
+</h4>
+<p>Yield curve control (YCC) is a monetary policy tool where a central bank purchases government bonds to target and maintain a specific yield, or interest rate, on those bonds, typically at longer maturities. This strategy aims to influence broader financial conditions and stimulate the economy by keeping long-term interest rates low.</p>
+</blockquote>
+<div class="bond-yields">
+<div>
+<img src="Screenshot 2025-07-15 at 22.59.25.png" alt="Yields last seen in 2008.">
+<p>
+Yields last seen in 2008.
+</p>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nvidia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: A plot of Nvidia’s Market Closing Prices
-</figcaption>
+</div>
+<p>With Japanese inflation finally showing signs of being sustainable and major corporations agreeing to significant wage hikes, the pressure on the BoJ to normalize its policy is immense. The market is now actively pricing in a potential end to YCC and a move away from negative interest rates. The chart below, showing the steady depreciation of the Yen against the US Dollar, is a clear visualization of this long-standing policy.</p>
+<div id="f3acd765" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-2-output-1.png" width="816" height="405" class="figure-img"></p>
+<figcaption>USD/JPY Exchange Rate - Last 20 Years</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The continued resilience of AI-related stocks has propelled NVIDIA to a historic milestone. Yesterday, the chipmaker became the first publicly traded company to surpass a $4 trillion market capitalization. This valuation places it ahead of tech giants like Microsoft and Apple, cementing its position as the undisputed leader in the AI hardware space.</p>
-<p>For traders, NVIDIA’s ascent is more than just a remarkable growth story; it’s a barometer for the entire tech sector and a significant driver of major indices like the S&amp;P 500 and Nasdaq. The key takeaways are:</p>
-<ol type="1">
-<li><p>Market Concentration: NVIDIA now represents over 7% of the S&amp;P 500. Its performance has an outsized impact on the broader market, creating both opportunities and concentration risks.</p></li>
-<li><p>Investor Sentiment: The demand for NVIDIA’s GPUs remains incredibly strong, reflecting a widespread belief that the AI boom is still in its early to middle innings.</p></li>
-<li><p>Future Challenges: While the outlook is strong, potential headwinds exist. The most notable are the ongoing US restrictions on advanced chip exports to China.</p></li>
-</ol>
-<section id="my-take-on-the-story" class="level4">
-<h4 class="anchored" data-anchor-id="my-take-on-the-story">MY TAKE ON THE STORY</h4>
-<p>The primary question isn’t whether NVIDIA is a great company, but whether its valuation is sustainable. The smarter play isn’t to bet against NVIDIA, but to look for second-order beneficiaries that aren’t as crowded. The AI boom requires a massive build-out of infrastructure, meaning power grid operators and utility companies. These are the less glamorous “shovels” of the AI gold rush.</p>
-<p>A company on my radar in this space includes:</p>
-<p>National Grid (NG.L): As a major utility, it stands to benefit from the massive increase in electricity demand from new data centers.</p>
+<p>A direct consequence of this policy has been the steady depreciation of the Yen against the US Dollar, which is a clear visualization of the carry trade in action.</p>
+<section id="my-take-the-end-of-the-carry-trade" class="level4">
+<h4 class="anchored" data-anchor-id="my-take-the-end-of-the-carry-trade">MY TAKE: THE END OF THE CARRY TRADE</h4>
+<p>The potential unwinding of the Japanese carry trade is one of the biggest stories in macro right now. For years, hedge funds and institutional investors have borrowed trillions of Yen for next to nothing to fund investments in everything from US Treasuries to high-yielding emerging market debt.</p>
+<p>If the BoJ pivots on IRs, and Japanese yields start to rise, this entire trade goes into reverse. Investors would be forced to sell their foreign assets and buy back Yen to repay their loans. This would trigger a massive repatriation of capital back to Japan, leading to a surge in the Yen’s value and significant selling pressure on global assets, particularly those that are popular carry trade destinations.</p>
+<p>The potential trade is to go long the Yen (vs.&nbsp;USD or EUR) in anticipation of this shift. It’s a crowded trade, but the asymmetry is compelling. The downside is limited by the BoJ’s current policy, while the upside from a full policy normalization is enormous. Although a potential concern could be straining relations and limited resolutions regarding trade deals. With Japan and the U.S. in their 7th round of negotiations!</p>
 </section>
 </section>
-<section id="the-copper-shock-unpacking-trumps-50-tariff" class="level1">
-<h1>The Copper Shock: Unpacking Trump’s 50% Tariff</h1>
-<p>In a move that sent shockwaves through the commodities markets, President Trump has confirmed a 50% tariff on all copper imports, expected to take effect by early August. This has immediate and significant implications, from price dislocation between COMEX and LME benchmarks to broad inflationary pressure. For the trading desk, this creates volatility and opportunity.</p>
-<section id="my-take-on-the-copper-tariff" class="level4">
-<h4 class="anchored" data-anchor-id="my-take-on-the-copper-tariff">MY TAKE ON THE COPPER TARIFF</h4>
-<p>This is a purely political move with messy, real-world economic consequences. The clear inflationary impact puts the Federal Reserve in a bind. If input costs are rising due to tariffs, the Fed may be forced to keep interest rates higher for longer.</p>
-<p>Potential trade ideas stemming from this:</p>
-<ol type="1">
-<li><p>Long US Copper Producers: They will see their margins expand significantly.</p></li>
-<li><p>Short EV/Green Energy Companies: This tariff acts as a direct tax on these copper-intensive sectors.</p></li>
-<li><p>Consider Volatility: This kind of unpredictable event increases overall market uncertainty. A long position on a volatility index like the VIX could be a sensible hedge.</p></li>
-</ol>
-</section>
-<section id="coffees-the-new-norm" class="level3">
-<h3 class="anchored" data-anchor-id="coffees-the-new-norm">$7 Coffees the New Norm?</h3>
-<p>In other commodities news, coffee futures rose sharply after President Trump announced potential 50% tariffs on imports from Brazil, a global leader in coffee production. This is another example of trade policy directly impacting consumer prices and creating new inflationary pressures.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Networking &amp; Jobs Update (July 11)">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Networking &amp; Jobs Update (July 11)
-</div>
-</div>
-<section id="event-series-highlight-meet-ubs-roadshow" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="event-series-highlight-meet-ubs-roadshow">Event Series Highlight: Meet UBS Roadshow</h3>
-<p>Applications for the UBS’s European recruitment events have just opened. With 2 UK cities receiving a visit: Birmingham &amp; Bath.</p>
-<p>Link: <a href="https://pages.ubs.beamery.eu/ubs/page/uk-emea-2025-meet-ubs-roadshow">Meet UBS</a></p>
-<p><strong>Internship Deadlines Fast Approaching! But don’t stress!</strong></p>
-<p>Many banks will open their Summer 2026 internship applications in late August/early September. Now is the time to be finalising your CV, upskilling, and networking.</p>
-<p>Start reaching out to alumni from your university on LinkedIn who are in roles you’re interested in. A short, polite message asking for a 15-minute chat can go a long way. <strong><em>And hey, you may even realise you’d hate to do what they’re doing!</em></strong></p>
-</section>
-</div>
+<section id="nvidia-continues-to-carry-u.s.-equity-markets." class="level1">
+<h1>Nvidia continues to carry U.S. Equity Markets.</h1>
+<p>Equity market gains were once again driven by the tech sector, with Nvidia at the forefront. The AI chip giant announced plans to resume sales of its H20 chips to China after the Trump administration lifted certain export restrictions. However, much of the morning’s optimism faded by the close, with tech ending as the only sector in the green.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
