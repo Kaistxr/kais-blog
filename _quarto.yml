@@ -11,24 +11,19 @@ website:
         text: Home
       - href: markets.qmd
         text: Markets
-      - href: tech.qmd
-        text: Tech
-      - href: opinion.qmd
-        text: Opinion
-      - href: internships.qmd
-        text: Internships
+
     right:
       - href: about.qmd
         text: About
       - icon: github
-        href: https://github.com/Kaistxr # Add your GitHub repo link here
+        href: https://github.com/Kaistxr
       - icon: linkedin
-        href: https://linkedin.com/in/your-username # Add your LinkedIn link here
+        href: https://www.linkedin.com/in/kai-larsen-pugh/
   page-footer:
     left: "Blog made with Quarto"
     right:
       - icon: github
-        href: https://github.com/your-username/your-repo-name
+        href: https://github.com/Kaistxr
 
 format:
   html:

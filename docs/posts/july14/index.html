@@ -9,7 +9,7 @@
 <meta name="author" content="Kai">
 <meta name="dcterms.date" content="2025-07-14">
 
-<title>Blue Monday – My Markets Blog</title>
+<title>Weekly Kick-Off: Trading Desks Shine, Copper Chaos, and AI Valuations – My Markets Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,41 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -176,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Blue Monday</h1>
+      <h1 class="title">Weekly Kick-Off: Trading Desks Shine, Copper Chaos, and AI Valuations</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Equities</div>
                 <div class="quarto-category">Macro</div>
@@ -234,149 +199,69 @@ border-bottom: 2px solid #dee2e6;
 padding-bottom: 0.5rem;
 margin-bottom: 1rem;
 }
+.plant-progress-container {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
+text-align: center;
+font-size: 0.8rem;
+color: #6c757d;
+}
+.plant-progress-container img {
+width: 100%;
+border-radius: 8px;
+border: 1px solid #dee2e6;
+}
 </style>
 <div class="g-col-md-1">
 <!-- This is an empty column that creates space on the left -->
 </div>
-<section id="nvidia-the-first-four-trillion-dollar-company" class="level1">
-<h1>NVIDIA: The First Four-Trillion-Dollar Company</h1>
-<div id="cell-fig-nvidia" class="cell" data-execution_count="1">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.dates <span class="im">as</span> mdates</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Data for stock prices extracted from search results (macrotrends.net)</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Format: (Date, Close Price)</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>stock_data <span class="op">=</span> [</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2024-09-16"</span>, <span class="fl">116.78</span>),</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2024-10-03"</span>, <span class="fl">122.85</span>),</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2024-10-22"</span>, <span class="fl">143.59</span>),</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2024-11-08"</span>, <span class="fl">147.63</span>),</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2024-11-27"</span>, <span class="fl">135.34</span>),</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2024-12-17"</span>, <span class="fl">130.39</span>),</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-01-08"</span>, <span class="fl">140.11</span>),</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-01-29"</span>, <span class="fl">123.70</span>),</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-02-18"</span>, <span class="fl">139.40</span>),</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-03-07"</span>, <span class="fl">112.69</span>),</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-03-26"</span>, <span class="fl">113.76</span>),</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-04-14"</span>, <span class="fl">110.71</span>),</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-05-05"</span>, <span class="fl">113.82</span>),</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-05-22"</span>, <span class="fl">131.80</span>),</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-06-11"</span>, <span class="fl">142.83</span>),</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-06-30"</span>, <span class="fl">157.99</span>),</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-07-09"</span>, <span class="fl">162.88</span>),</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"2025-07-10"</span>, <span class="fl">164.10</span>),</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of shares outstanding for NVIDIA as of July 2025 is ~24.44 billion</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>shares_outstanding <span class="op">=</span> <span class="fl">24.44e9</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Separate dates and prices</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>dates_str, prices <span class="op">=</span> <span class="bu">zip</span>(<span class="op">*</span>stock_data)</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert date strings to datetime objects</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>dates <span class="op">=</span> [datetime.datetime.strptime(d, <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">"</span>) <span class="cf">for</span> d <span class="kw">in</span> dates_str]</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate market cap in trillions</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Market Cap = Stock Price * Shares Outstanding</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>market_caps <span class="op">=</span> [(price <span class="op">*</span> shares_outstanding) <span class="op">/</span> <span class="fl">1e12</span> <span class="cf">for</span> price <span class="kw">in</span> prices]</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the plot using subplots to get access to the axis object</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>ax.plot(dates, market_caps, marker<span class="op">=</span><span class="st">'o'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>, color<span class="op">=</span><span class="st">'g'</span>)</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a horizontal line at the $4 trillion mark</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>ax.axhline(y<span class="op">=</span><span class="dv">4</span>, color<span class="op">=</span><span class="st">'r'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'$4 Trillion Mark'</span>)</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Add titles and labels</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"NVIDIA (NVDA) Market Cap (Last 12 Months)"</span>)</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Date"</span>)</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Market Cap (USD Trillions)"</span>)</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="co"># --- X-Axis Formatting to Prevent Crowding ---</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Set a more compact date format (e.g., 'Sep-24')</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_major_formatter(mdates.DateFormatter(<span class="st">'%b-%y'</span>))</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Set ticks to appear every two months for clarity</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_major_locator(mdates.MonthLocator(interval<span class="op">=</span><span class="dv">2</span>))</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Rotate date labels for better readability</span></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>fig.autofmt_xdate()</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Adjust plot to ensure everything fits without overlapping</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<div class="g-col-12 g-col-md-7">
+<section id="theme-of-the-week-trading-outshines-banking" class="level1">
+<h1>Theme of the Week: Trading Outshines Banking</h1>
+<p>A clear theme is emerging as banks begin to report their Q2 earnings: traders continue to ride the volatility ‘wave’. Across Wall Street, firms are seeing their Sales &amp; Trading divisions post bumper profits, driven by client activity around whipsawing commodity prices and interest rate uncertainty. This stands in stark contrast to the more subdued performance from traditional Investment Banking (M&amp;A, IPOs), where deal flow remains sluggish. This divergence highlights a key market dynamic: while uncertainty can stall corporate activity, it provides fertile ground for trading desks.</p>
+<div id="ac564c51" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
-<div id="fig-nvidia" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-nvidia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-nvidia-output-1.png" width="949" height="469" class="figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nvidia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: A plot of Nvidia’s Stock Price
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-2-output-1.png" width="733" height="416" class="figure-img"></p>
+<figcaption>CBOE Volatility Index (VIX) - Last 6 Months</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The continued resilience of AI-related stocks has propelled NVIDIA to a historic milestone. Yesterday, the chipmaker became the first publicly traded company to surpass a $4 trillion market capitalization. This valuation places it ahead of tech giants like Microsoft and Apple, cementing its position as the undisputed leader in the AI hardware space.</p>
-<p>For traders, NVIDIA’s ascent is more than just a remarkable growth story; it’s a barometer for the entire tech sector and a significant driver of major indices like the S&amp;P 500 and Nasdaq. The key takeaways are:</p>
-<ol type="1">
-<li><p>Market Concentration: NVIDIA now represents over 7% of the S&amp;P 500. Its performance has an outsized impact on the broader market, creating both opportunities and concentration risks.</p></li>
-<li><p>Investor Sentiment: The demand for NVIDIA’s GPUs remains incredibly strong, reflecting a widespread belief that the AI boom is still in its early to middle innings.</p></li>
-<li><p>Future Challenges: While the outlook is strong, potential headwinds exist. The most notable are the ongoing US restrictions on advanced chip exports to China.</p></li>
-</ol>
-<section id="my-take-on-the-story" class="level4">
-<h4 class="anchored" data-anchor-id="my-take-on-the-story">MY TAKE ON THE STORY</h4>
-<p>The primary question isn’t whether NVIDIA is a great company, but whether its valuation is sustainable. The smarter play isn’t to bet against NVIDIA, but to look for second-order beneficiaries that aren’t as crowded. The AI boom requires a massive build-out of infrastructure, meaning power grid operators and utility companies. These are the less glamorous “shovels” of the AI gold rush.</p>
-<p>A company on my radar in this space includes:</p>
-<p>National Grid (NG.L): As a major utility, it stands to benefit from the massive increase in electricity demand from new data centers.</p>
+</section>
+<section id="copper-arbitrage-the-tariff-windfall" class="level1">
+<h1>Copper Arbitrage: The Tariff Windfall</h1>
+<p>Following up on last week’s analysis of the US copper tariff, the real winners are becoming clear: the major commodity trading houses. Firms like Glencore and Trafigura are reportedly set for a $300 million windfall by exploiting the price arbitrage between the LME and COMEX markets. By purchasing copper on the cheaper international market and shipping it to the US to sell at the inflated, tariff-protected price, they are capitalizing on the exact market dislocation we discussed.</p>
+<section id="my-take" class="level4">
+<h4 class="anchored" data-anchor-id="my-take">MY TAKE</h4>
+<p>This is a classic example of how physical logistics and market access create immense value in commodities trading. While the trade itself is simple in theory, only a handful of players have the global infrastructure to execute it at scale. It underscores that in commodities, it’s not just about predicting price direction but also about controlling the flow of the underlying asset.</p>
 </section>
 </section>
-<section id="the-copper-shock-unpacking-trumps-50-tariff" class="level1">
-<h1>The Copper Shock: Unpacking Trump’s 50% Tariff</h1>
-<p>In a move that sent shockwaves through the commodities markets, President Trump has confirmed a 50% tariff on all copper imports, expected to take effect by early August. This has immediate and significant implications, from price dislocation between COMEX and LME benchmarks to broad inflationary pressure. For the trading desk, this creates volatility and opportunity.</p>
-<section id="my-take-on-the-copper-tariff" class="level4">
-<h4 class="anchored" data-anchor-id="my-take-on-the-copper-tariff">MY TAKE ON THE COPPER TARIFF</h4>
-<p>This is a purely political move with messy, real-world economic consequences. The clear inflationary impact puts the Federal Reserve in a bind. If input costs are rising due to tariffs, the Fed may be forced to keep interest rates higher for longer.</p>
-<p>Potential trade ideas stemming from this:</p>
-<ol type="1">
-<li><p>Long US Copper Producers: They will see their margins expand significantly.</p></li>
-<li><p>Short EV/Green Energy Companies: This tariff acts as a direct tax on these copper-intensive sectors.</p></li>
-<li><p>Consider Volatility: This kind of unpredictable event increases overall market uncertainty. A long position on a volatility index like the VIX could be a sensible hedge.</p></li>
-</ol>
-</section>
-<section id="coffees-the-new-norm" class="level3">
-<h3 class="anchored" data-anchor-id="coffees-the-new-norm">$7 Coffees the New Norm?</h3>
-<p>In other commodities news, coffee futures rose sharply after President Trump announced potential 50% tariffs on imports from Brazil, a global leader in coffee production. This is another example of trade policy directly impacting consumer prices and creating new inflationary pressures.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Networking &amp; Jobs Update (July 11)">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<section id="barclays-q2-earnings-a-tale-of-two-divisions" class="level1">
+<h1>Barclays Q2 Earnings: A Tale of Two Divisions</h1>
+<p>This morning, Barclays reported its second-quarter earnings, perfectly illustrating the week’s theme. The bank significantly beat expectations, driven almost entirely by its FICC (Fixed Income, Currencies, and Commodities) trading division, which saw revenues jump 25% year-over-year. In contrast, its advisory and capital markets unit was largely flat.</p>
+<p>MY TAKE &amp; A Personal Note Barclays’ results confirm that market-facing divisions are the engine of growth in this environment. The news reminded me to check up on the plant seeds I received from Barclays at a careers fair earlier this year. Just as the trading floor thrives on the right conditions, this plant has been a small project in nurturing growth; benefitting from a combination of great sunlight levels and watering. I’ll keep readers updated with the plant’s progress as we approach application season.</p>
+<div class="plant-progress-container">
+<div>
+<img src="14359548-2cd0-408d-9276-4312c94d1307.jpg" alt="A small plant sprouting in a pot.">
+<p>
+May: Just starting out
+</p>
 </div>
-<div class="callout-title-container flex-fill">
-Networking &amp; Jobs Update (July 11)
+<div>
+<img src="IMG_4847.jpg" alt="The plant has grown taller with more leaves.">
+<p>
+July: Showing strong growth
+</p>
 </div>
 </div>
-<section id="event-series-highlight-meet-ubs-roadshow" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="event-series-highlight-meet-ubs-roadshow">Event Series Highlight: Meet UBS Roadshow</h3>
-<p>Applications for the UBS’s European recruitment events have just opened. With 2 UK cities receiving a visit: Birmingham &amp; Bath.</p>
-<p>Link: <a href="https://pages.ubs.beamery.eu/ubs/page/uk-emea-2025-meet-ubs-roadshow">Meet UBS</a></p>
-<p><strong>Internship Deadlines Fast Approaching! But don’t stress!</strong></p>
-<p>Many banks will open their Summer 2026 internship applications in late August/early September. Now is the time to be finalising your CV, upskilling, and networking.</p>
-<p>Start reaching out to alumni from your university on LinkedIn who are in roles you’re interested in. A short, polite message asking for a 15-minute chat can go a long way. <strong><em>And hey, you may even realise you’d hate to do what they’re doing!</em></strong></p>
-</section>
-</div>
+<p>Seeing this physical growth is a great metaphor for my own progress. Just as the plant needs the right inputs to flourish, my goal over these months is to cultivate my skills and market knowledge to be ready for the fast-paced environment of a trading floor.</p>
 
 
 </section>
-</section>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

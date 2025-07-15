@@ -1,0 +1,108 @@
+---
+title: "Weekly Kick-Off: Trading Desks Shine, Copper Chaos, and AI Valuations"
+author: "Kai"
+date: "2025-07-14"
+categories: [Equities, Macro, Tech, Commodities]
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+<style>
+.sidebar-card {
+background-color: #f8f9fa;
+border: 1px solid #e9ecef;
+border-radius: 8px;
+padding: 1.5rem;
+margin-top: 1rem;
+font-size: 0.9rem;
+}
+.sidebar-card h3 {
+margin-top: 0;
+font-size: 1.1rem;
+border-bottom: 2px solid #dee2e6;
+padding-bottom: 0.5rem;
+margin-bottom: 1rem;
+}
+.plant-progress-container {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
+text-align: center;
+font-size: 0.8rem;
+color: #6c757d;
+}
+.plant-progress-container img {
+width: 100%;
+border-radius: 8px;
+border: 1px solid #dee2e6;
+}
+</style>
+
+
+
+::: {.g-col-md-1}
+
+<!-- This is an empty column that creates space on the left -->
+
+:::
+
+::: {.g-col-12 .g-col-md-7}
+
+# Theme of the Week: Trading Outshines Banking
+A clear theme is emerging as banks begin to report their Q2 earnings: traders continue to ride the volatility 'wave'. Across Wall Street, firms are seeing their Sales & Trading divisions post bumper profits, driven by client activity around whipsawing commodity prices and interest rate uncertainty. This stands in stark contrast to the more subdued performance from traditional Investment Banking (M&A, IPOs), where deal flow remains sluggish. This divergence highlights a key market dynamic: while uncertainty can stall corporate activity, it provides fertile ground for trading desks.
+
+```{python}
+#| echo: false
+#| fig-cap: "CBOE Volatility Index (VIX) - Last 6 Months"
+
+import yfinance as yf
+import matplotlib.pyplot as plt
+import pandas as pd
+
+try:
+    # Fetch the last 6 months of VIX data
+    vix = yf.Ticker("^VIX")
+    hist = vix.history(period="6mo")
+
+    # Create the plot
+    fig, ax = plt.subplots(figsize=(9, 5))
+    ax.plot(hist.index, hist['Close'], color='purple', linewidth=2)
+
+    # Style the plot
+    ax.set_title('CBOE Volatility Index (VIX) - Last 6 Months', fontsize=14)
+    ax.set_ylabel('Index Level')
+    ax.grid(True, linestyle='--', alpha=0.6)
+    fig.autofmt_xdate()
+    
+    # Show the plot so Quarto can capture it
+    plt.show()
+
+except Exception as e:
+    print(f"<p style='color: red;'>Could not load VIX chart: {e}</p>")
+```
+
+# Copper Arbitrage: The Tariff Windfall
+Following up on last week's analysis of the US copper tariff, the real winners are becoming clear: the major commodity trading houses. Firms like Glencore and Trafigura are reportedly set for a $300 million windfall by exploiting the price arbitrage between the LME and COMEX markets. By purchasing copper on the cheaper international market and shipping it to the US to sell at the inflated, tariff-protected price, they are capitalizing on the exact market dislocation we discussed.
+
+#### MY TAKE
+This is a classic example of how physical logistics and market access create immense value in commodities trading. While the trade itself is simple in theory, only a handful of players have the global infrastructure to execute it at scale. It underscores that in commodities, it's not just about predicting price direction but also about controlling the flow of the underlying asset.
+
+# Barclays Q2 Earnings: A Tale of Two Divisions
+This morning, Barclays reported its second-quarter earnings, perfectly illustrating the week's theme. The bank significantly beat expectations, driven almost entirely by its FICC (Fixed Income, Currencies, and Commodities) trading division, which saw revenues jump 25% year-over-year. In contrast, its advisory and capital markets unit was largely flat.
+
+MY TAKE & A Personal Note
+Barclays' results confirm that market-facing divisions are the engine of growth in this environment. The news reminded me to check up on the plant seeds I received from Barclays at a careers fair earlier this year. Just as the trading floor thrives on the right conditions, this plant has been a small project in nurturing growth; benefitting from a combination of great sunlight levels and watering. I'll keep readers updated with the plant's progress as we approach application season.
+
+<div class="plant-progress-container">
+<div>
+<img src="14359548-2cd0-408d-9276-4312c94d1307.jpg" alt="A small plant sprouting in a pot.">
+<p>May: Just starting out</p>
+</div>
+<div>
+<img src="IMG_4847.jpg" alt="The plant has grown taller with more leaves.">
+<p>July: Showing strong growth</p>
+</div>
+</div>
+
+Seeing this physical growth is a great metaphor for my own progress. Just as the plant needs the right inputs to flourish, my goal over these months is to cultivate my skills and market knowledge to be ready for the fast-paced environment of a trading floor.
