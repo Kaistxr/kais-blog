@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Kaistxr.github.io/kais-blog/about.html</loc>
-    <lastmod>2025-07-15T17:18:34.751Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Kaistxr.github.io/kais-blog/markets.html</loc>
-    <lastmod>2025-07-15T17:18:34.793Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Kaistxr.github.io/kais-blog/posts/aug1/index.html</loc>
-    <lastmod>2025-08-03T16:39:47.174Z</lastmod>
-  </url>
-  <url>
     <loc>https://Kaistxr.github.io/kais-blog/posts/july14/index.html</loc>
-    <lastmod>2025-07-15T17:18:34.802Z</lastmod>
+    <lastmod>2025-08-03T18:49:51.943Z</lastmod>
   </url>
   <url>
     <loc>https://Kaistxr.github.io/kais-blog/posts/july15/index.html</loc>
-    <lastmod>2025-07-15T22:36:49.413Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Kaistxr.github.io/kais-blog/posts/july11/index.html</loc>
-    <lastmod>2025-07-15T17:18:34.794Z</lastmod>
+    <lastmod>2025-08-03T18:49:51.944Z</lastmod>
   </url>
   <url>
     <loc>https://Kaistxr.github.io/kais-blog/index.html</loc>
-    <lastmod>2025-07-15T17:18:34.793Z</lastmod>
+    <lastmod>2025-08-03T18:49:51.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Kaistxr.github.io/kais-blog/about.html</loc>
+    <lastmod>2025-08-03T18:49:51.905Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Kaistxr.github.io/kais-blog/posts/july11/index.html</loc>
+    <lastmod>2025-08-03T18:49:51.930Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Kaistxr.github.io/kais-blog/posts/aug1/index.html</loc>
+    <lastmod>2025-08-03T18:49:51.929Z</lastmod>
   </url>
 </urlset>
