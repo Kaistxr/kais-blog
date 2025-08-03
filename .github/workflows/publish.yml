@@ -24,8 +24,10 @@ jobs:
         with:
           python-version: '3.10'
 
+      # --- ADDED THIS NEW STEP ---
       - name: Install Python Dependencies
-        run: pip install matplotlib
+        run: |
+          pip install jupyter pyyaml yfinance matplotlib pandas_datareader
 
       - name: Replace API Key Placeholder
         # This command finds all HTML files in the output 'docs' directory
