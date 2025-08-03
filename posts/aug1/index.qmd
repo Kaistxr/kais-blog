@@ -1,0 +1,98 @@
+---
+title: "Jobs Shock and Tariff Walls"
+author: "Kai"
+date: "2025-08-01"
+categories: [Equities, Macro, FX]
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+<style>
+.sidebar-card {
+background-color: #f8f9fa;
+border: 1px solid #e9ecef;
+border-radius: 8px;
+padding: 1.5rem;
+margin-top: 1rem;
+font-size: 0.9rem;
+}
+.sidebar-card h3 {
+margin-top: 0;
+font-size: 1.1rem;
+border-bottom: 2px solid #dee2e6;
+padding-bottom: 0.5rem;
+margin-bottom: 1rem;
+}
+.bond-yields {
+display: inline;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
+text-align: center;
+font-size: 0.8rem;
+color: #6c757d;
+}
+.bond-yields img {
+width: 100%;
+border-radius: 8px;
+border: 1px solid #dee2e6;
+}
+</style>
+
+
+
+::: {.g-col-md-1}
+
+<!-- This is an empty column that creates space on the left -->
+
+:::
+
+# US Jobs Growth Craters, Sending Shockwaves Through Markets
+The big story of the day is the US labor market, which has suddenly shown significant signs of cracking. The Non-Farm Payrolls report for July came in at just 73,000, a huge miss from the expected number and a sharp slowdown from previous months. To make matters worse, the reports for May and June were revised down by a combined 258,000 jobs, suggesting the labor market was much weaker than previously thought.
+This report is the first hard data point to suggest that the series of aggressive tariffs implemented by the Trump administration are beginning to bite into the real economy. The market reaction was severe: equity futures immediately turned negative, and government bond yields plunged as investors priced in a higher probability of a FED rate cut.
+
+```{python}
+#| echo: false
+#| fig-cap: "US Non-Farm Payrolls - Monthly Change"
+
+import pandas_datareader.data as web
+import matplotlib.pyplot as plt
+import datetime
+
+try:
+    # Set start and end dates for the data
+    start = datetime.datetime(2023, 1, 1)
+    end = datetime.date.today()
+
+    # Fetch Non-Farm Payrolls data from FRED
+    nfp = web.DataReader('PAYEMS', 'fred', start, end)
+
+    # Calculate the monthly change
+    nfp_change = nfp.diff()
+    nfp_change.dropna(inplace=True)
+
+    # Create the plot
+    fig, ax = plt.subplots(figsize=(10, 5))
+    ax.bar(nfp_change.index, nfp_change['PAYEMS'], color='#0056b3', width=20)
+
+    # Style the plot
+    ax.set_title('US Non-Farm Payrolls - Monthly Change (in Thousands)', fontsize=14)
+    ax.set_ylabel('Jobs Added/Lost')
+    ax.grid(True, linestyle='--', axis='y', alpha=0.6)
+    ax.axhline(0, color='black', linewidth=0.5)
+    fig.autofmt_xdate()
+    
+    plt.show()
+
+except Exception as e:
+    print(f"<p style='color: red;'>Could not load NFP chart: {e}</p>")
+```
+####MY TAKE: A CLEARER PATH FOR THE FED
+For weeks, the market has been grappling with a difficult narrative: slowing growth versus persistent inflation. This jobs report changes things. A miss this significant, combined with the large downward revisions, gives the Federal Reserve the justification it needs to cut interest rates. The Fed has a dual mandate of price stability and maximum employment, and this report flashes a clear warning sign on the employment side. The probability of a 25 basis point cut at the September meeting has definitely increased. The question now is whether the market will start to price in an even more aggressive 50 basis point cut.
+A direct consequence of this policy has been the steady depreciation of the Yen against the US Dollar, which is a clear visualization of the carry trade in action.
+
+# All Eyes on the Bank of England
+With the US outlook suddenly looking much weaker, attention now shifts to the Bank of England's interest rate decision next week. The BoE is in a particularly tough spot. UK inflation remains stubbornly above its 2% target, but the prospect of a global slowdown, kicked off by the US, makes further rate hikes incredibly risky. The latest UK Services PMI data, a key indicator of the domestic economy's health, has shown resilience but is now threatened by these external headwinds.
+
+####MY TAKE
+Today's disastrous US jobs report is ironically a gift to the Bank of England. It gives them the political cover they need to pause their rate-hiking cycle, or even signal a cut, without looking soft on domestic inflation. The argument will be that a US slowdown will inevitably cool global demand and import inflation into the UK, doing some of the BoE's work for it. The key trade to watch is GBP/USD with both currencies under pressure. The Dollar from the weak data, the Pound from the prospect of a more dovish BoE. This sets up a volatile dynamic where the currency that weakens less, wins.
