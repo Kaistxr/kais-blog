@@ -1,7 +1,7 @@
 # Main configuration file for your Quarto blog
 project:
   type: website
-  output-dir: docs
+  output-dir: posts
 
 website:
   title: "My Markets Blog"
@@ -9,8 +9,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: markets.qmd
-        text: Markets
 
     right:
       - href: about.qmd
