@@ -1,0 +1,95 @@
+---
+title: "Inflation Eases, But is the Market's Confidence Premature?"
+author: "Kai"
+date: "2025-08-12"
+categories: [Macro, Equities, Rates, US Economy]
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+<style>
+.sidebar-card {
+background-color: #f8f9fa;
+border: 1px solid #e9ecef;
+border-radius: 8px;
+padding: 1.5rem;
+margin-top: 1rem;
+font-size: 0.9rem;
+}
+.sidebar-card h3 {
+margin-top: 0;
+font-size: 1.1rem;
+border-bottom: 2px solid #dee2e6;
+padding-bottom: 0.5rem;
+margin-bottom: 1rem;
+}
+.bond-yields {
+display: inline;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
+text-align: center;
+font-size: 0.8rem;
+color: #6c757d;
+}
+.bond-yields img {
+width: 100%;
+border-radius: 8px;
+border: 1px solid #dee2e6;
+}
+</style>
+
+
+
+::: {.g-col-md-1}
+
+<!-- This is an empty column that creates space on the left -->
+
+:::
+
+# US Inflation Cools, Fueling Hopes for a September Rate Cut
+The moment the market has been waiting for has arrived, and it delivered exactly what investors wanted to see. The latest US Consumer Price Index (CPI) report for July showed that inflation is finally beginning to moderate. The headline number came in slightly below expectations, and more importantly, the "core" CPI figure, which the Federal Reserve watches closely, showed a clear deceleration.
+The market reaction was immediate and powerful. Equity indices like the S&P 500 surged, bond yields fell sharply, and the US Dollar weakened against other major currencies. This is a classic "risk-on" move, driven by the belief that this inflation data gives the Fed the green light to cut interest rates at its September meeting.
+CME FedWatch now suggests the probability of a rate cut in September of being *94.2%*!
+
+```{python}
+#| echo: false
+#| fig-cap: "US Inflation (CPI YoY % Change)"
+
+import pandas_datareader.data as web
+import matplotlib.pyplot as plt
+import datetime
+
+try:
+    # Set start and end dates for the data
+    start = datetime.datetime(2020, 1, 1)
+    end = datetime.date.today()
+
+    # Fetch CPI data from FRED (Federal Reserve Economic Data)
+    cpi = web.DataReader('CPIAUCSL', 'fred', start, end)
+
+    # Calculate year-over-year percentage change
+    cpi_yoy = cpi.pct_change(periods=12) * 100
+    cpi_yoy.dropna(inplace=True) # Drop NaN values from the first year
+
+    # Create the plot
+    fig, ax = plt.subplots(figsize=(10, 5))
+    ax.plot(cpi_yoy.index, cpi_yoy['CPIAUCSL'], color='red', linewidth=2, label='YoY CPI Change')
+
+    # Style the plot
+    ax.set_title('US Inflation (CPI YoY % Change)', fontsize=14)
+    ax.set_ylabel('YoY % Change')
+    ax.grid(True, linestyle='--', alpha=0.6)
+    ax.axhline(2, color='grey', linestyle='--', linewidth=1, label='2% Target')
+    fig.autofmt_xdate()
+    ax.legend()
+    
+    plt.show()
+
+except Exception as e:
+    print(f"<p style='color: red;'>Could not load US Inflation chart: {e}</p>")
+
+```
+#### MY TAKE: Is the Market Getting Ahead of Itself?
+While a cooler inflation print is undoubtedly good news, the market's euphoric reaction might be premature. Fed Chair Jerome Powell has repeatedly emphasised that he needs to see a sustained trend of falling inflation before he is comfortable cutting rates. One good data point is not a trend.
+The risk here is that the market is pricing in a "perfect landing" scenario where inflation falls gracefully back to 2% without a significant economic slowdown. This leaves very little room for error. If the next inflation report comes in hot, or if other economic data (like the next jobs report) is stronger than expected, this rally could reverse just as quickly as it began. 
