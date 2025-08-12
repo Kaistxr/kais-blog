@@ -1,0 +1,158 @@
+---
+title: "Market Update: NVIDIA's New Peak and Copper's Tariff Shock + UBS Roadshow!"
+author: "Kai"
+date: "2025-07-10"
+categories: [Equities, Macro, Tech, Commodities]
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+<style>
+.sidebar-card {
+background-color: #f8f9fa;
+border: 1px solid #e9ecef;
+border-radius: 8px;
+padding: 1.5rem;
+margin-top: 1rem;
+font-size: 0.9rem;
+}
+.sidebar-card h3 {
+margin-top: 0;
+font-size: 1.1rem;
+border-bottom: 2px solid #dee2e6;
+padding-bottom: 0.5rem;
+margin-bottom: 1rem;
+}
+</style>
+
+
+
+::: {.g-col-md-1}
+
+<!-- This is an empty column that creates space on the left -->
+
+:::
+
+
+
+# NVIDIA: The First Four-Trillion-Dollar Company
+
+```{python}
+#| label: fig-nvidia
+#| fig-cap: "A plot of Nvidia's Market Closing Prices"
+
+import matplotlib.pyplot as plt
+import datetime
+
+# Data for stock prices from macrotrends.net
+stock_data = [
+    ("2024-09-16", 116.78),
+    ("2024-10-03", 122.85),
+    ("2024-10-22", 143.59),
+    ("2024-11-08", 147.63),
+    ("2024-11-27", 135.34),
+    ("2024-12-17", 130.39),
+    ("2025-01-08", 140.11),
+    ("2025-01-29", 123.70),
+    ("2025-02-18", 139.40),
+    ("2025-03-07", 112.69),
+    ("2025-03-26", 113.76),
+    ("2025-04-14", 110.71),
+    ("2025-05-05", 113.82),
+    ("2025-05-22", 131.80),
+    ("2025-06-11", 142.83),
+    ("2025-06-30", 157.99),
+    ("2025-07-09", 162.88),
+    ("2025-07-10", 164.10),
+]
+
+# Number of shares outstanding for NVIDIA as of July 2025 is ~24.44 billion
+shares_outstanding = 24.44e9
+
+# Separate dates and prices
+dates_str, prices = zip(*stock_data)
+
+# Convert date strings to datetime objects
+dates = [datetime.datetime.strptime(d, "%Y-%m-%d") for d in dates_str]
+
+# Calculate market cap in trillions
+market_caps = [(price * shares_outstanding) / 1e12 for price in prices]
+
+# Create the plot
+plt.figure(figsize=(7, 5))
+plt.plot(dates, market_caps, marker='o', linestyle='-', color='g')
+
+# Add a horizontal line at the $4 trillion mark
+plt.axhline(y=4, color='r', linestyle='--', label='$4 Trillion Mark')
+plt.legend()
+
+# Add titles and labels
+plt.title("NVIDIA (NVDA) Market Cap (Last 12 Months)")
+plt.xlabel("Date")
+plt.ylabel("Market Cap (USD Trillions)")
+plt.grid(True)
+
+# Format the plot to ensure everything fits
+plt.gcf().autofmt_xdate()
+plt.tight_layout()
+
+# Save the chart as a PNG image file for your website
+plt.savefig('nvidia_market_cap.png')
+
+# Display the plot
+plt.show()
+
+
+
+```
+
+The continued resilience of AI-related stocks has propelled NVIDIA to a historic milestone. Yesterday, the chipmaker became the first publicly traded company to surpass a $4 trillion market capitalization. This valuation places it ahead of tech giants like Microsoft and Apple, cementing its position as the undisputed leader in the AI hardware space.
+
+For traders, NVIDIA's ascent is more than just a remarkable growth story; it's a barometer for the entire tech sector and a significant driver of major indices like the S&P 500 and Nasdaq. The key takeaways are:
+
+1. Market Concentration: NVIDIA now represents over 7% of the S&P 500. Its performance has an outsized impact on the broader market, creating both opportunities and concentration risks.
+
+2. Investor Sentiment: The demand for NVIDIA's GPUs remains incredibly strong, reflecting a widespread belief that the AI boom is still in its early to middle innings.
+
+3. Future Challenges: While the outlook is strong, potential headwinds exist. The most notable are the ongoing US restrictions on advanced chip exports to China.
+
+#### MY TAKE ON THE STORY
+
+The primary question isn't whether NVIDIA is a great company, but whether its valuation is sustainable. The smarter play isn't to bet against NVIDIA, but to look for second-order beneficiaries that aren't as crowded. The AI boom requires a massive build-out of infrastructure, meaning power grid operators and utility companies. These are the less glamorous "shovels" of the AI gold rush.
+
+A company on my radar in this space includes:
+
+National Grid (NG.L): As a major utility, it stands to benefit from the massive increase in electricity demand from new data centers.
+
+# The Copper Shock: Unpacking Trump's 50% Tariff
+In a move that sent shockwaves through the commodities markets, President Trump has confirmed a 50% tariff on all copper imports, expected to take effect by early August. This has immediate and significant implications, from price dislocation between COMEX and LME benchmarks to broad inflationary pressure. For the trading desk, this creates volatility and opportunity.
+
+#### MY TAKE ON THE COPPER TARIFF
+This is a purely political move with messy, real-world economic consequences. The clear inflationary impact puts the Federal Reserve in a bind. If input costs are rising due to tariffs, the Fed may be forced to keep interest rates higher for longer.
+
+Potential trade ideas stemming from this:
+
+1. Long US Copper Producers: They will see their margins expand significantly.
+
+2. Short EV/Green Energy Companies: This tariff acts as a direct tax on these copper-intensive sectors.
+
+3. Consider Volatility: This kind of unpredictable event increases overall market uncertainty. A long position on a volatility index like the VIX could be a sensible hedge.
+
+### $7 Coffees the New Norm?
+In other commodities news, coffee futures rose sharply after President Trump announced potential 50% tariffs on imports from Brazil, a global leader in coffee production. This is another example of trade policy directly impacting consumer prices and creating new inflationary pressures.
+
+::: {.callout-note title="Networking & Jobs Update (July 11)" icon="false"}
+
+### Event Series Highlight: Meet UBS Roadshow
+
+Applications for the UBS’s European recruitment events have just opened. With 2 UK cities receiving a visit: Birmingham & Bath.
+
+Link: [Meet UBS](https://pages.ubs.beamery.eu/ubs/page/uk-emea-2025-meet-ubs-roadshow)
+
+**Internship Deadlines Fast Approaching! But don't stress!**
+
+Many banks will open their Summer 2026 internship applications in late August/early September. Now is the time to be finalising your CV, upskilling, and networking.
+
+Start reaching out to alumni from your university on LinkedIn who are in roles you're interested in. A short, polite message asking for a 15-minute chat can go a long way. ***And hey, you may even realise you’d hate to do what they’re doing!***
+:::
